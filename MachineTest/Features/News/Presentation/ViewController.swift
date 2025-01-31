@@ -120,4 +120,12 @@ extension ViewController: UITableViewDataSource {
         cell.configure(with: viewModel.getNews()[indexPath.row], isMainNews: indexPath.row == 0)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let source = viewModel.getNews()[indexPath.row].link
+        let detailPage = NewsDetailViewController()
+        detailPage.source = source
+        detailPage.modalPresentationStyle = .fullScreen
+        self.show(detailPage, sender: self)
+    }
 }
