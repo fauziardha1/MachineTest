@@ -17,6 +17,8 @@
 		AC912B0B2D4BAF6F001D43B1 /* Category.json in Resources */ = {isa = PBXBuildFile; fileRef = AC912B052D4BAE4C001D43B1 /* Category.json */; };
 		AC912B0D2D4BB317001D43B1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC912B0C2D4BB317001D43B1 /* Category.swift */; };
 		AC912B0F2D4BB320001D43B1 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC912B0E2D4BB320001D43B1 /* News.swift */; };
+		AC912B112D4BB717001D43B1 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC912B102D4BB717001D43B1 /* NewsViewModel.swift */; };
+		ACA647C92D4C98A600FE834C /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA647C82D4C98A600FE834C /* CategoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		AC912B062D4BAE4C001D43B1 /* NEWS.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NEWS.json; sourceTree = "<group>"; };
 		AC912B0C2D4BB317001D43B1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		AC912B0E2D4BB320001D43B1 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		AC912B102D4BB717001D43B1 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		ACA647C82D4C98A600FE834C /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 				1B8EB348252099F3004F9BD2 /* AppDelegate.swift */,
 				1B8EB34A252099F3004F9BD2 /* SceneDelegate.swift */,
 				1B8EB34C252099F3004F9BD2 /* ViewController.swift */,
+				ACA647C82D4C98A600FE834C /* CategoryCell.swift */,
+				AC912B102D4BB717001D43B1 /* NewsViewModel.swift */,
 				AC912B0C2D4BB317001D43B1 /* Category.swift */,
 				AC912B0E2D4BB320001D43B1 /* News.swift */,
 				1B8EB34E252099F3004F9BD2 /* Main.storyboard */,
@@ -168,7 +174,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B8EB34D252099F3004F9BD2 /* ViewController.swift in Sources */,
+				AC912B112D4BB717001D43B1 /* NewsViewModel.swift in Sources */,
 				1B8EB349252099F3004F9BD2 /* AppDelegate.swift in Sources */,
+				ACA647C92D4C98A600FE834C /* CategoryCell.swift in Sources */,
 				1B8EB34B252099F3004F9BD2 /* SceneDelegate.swift in Sources */,
 				AC912B0F2D4BB320001D43B1 /* News.swift in Sources */,
 				AC912B0D2D4BB317001D43B1 /* Category.swift in Sources */,
