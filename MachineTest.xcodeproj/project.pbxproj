@@ -20,6 +20,7 @@
 		AC912B112D4BB717001D43B1 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC912B102D4BB717001D43B1 /* NewsViewModel.swift */; };
 		ACA647C92D4C98A600FE834C /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA647C82D4C98A600FE834C /* CategoryCell.swift */; };
 		ACA647CB2D4CA79000FE834C /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA647CA2D4CA79000FE834C /* NewsCell.swift */; };
+		ACA647D22D4CAD1100FE834C /* NewsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA647D12D4CAD1100FE834C /* NewsInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		AC912B102D4BB717001D43B1 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		ACA647C82D4C98A600FE834C /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		ACA647CA2D4CA79000FE834C /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		ACA647D12D4CAD1100FE834C /* NewsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,15 +72,10 @@
 		1B8EB347252099F3004F9BD2 /* MachineTest */ = {
 			isa = PBXGroup;
 			children = (
+				ACA647CC2D4CAC7400FE834C /* Features */,
 				AC912B082D4BAE4C001D43B1 /* Data */,
 				1B8EB348252099F3004F9BD2 /* AppDelegate.swift */,
 				1B8EB34A252099F3004F9BD2 /* SceneDelegate.swift */,
-				1B8EB34C252099F3004F9BD2 /* ViewController.swift */,
-				ACA647CA2D4CA79000FE834C /* NewsCell.swift */,
-				ACA647C82D4C98A600FE834C /* CategoryCell.swift */,
-				AC912B102D4BB717001D43B1 /* NewsViewModel.swift */,
-				AC912B0C2D4BB317001D43B1 /* Category.swift */,
-				AC912B0E2D4BB320001D43B1 /* News.swift */,
 				1B8EB34E252099F3004F9BD2 /* Main.storyboard */,
 				1B8EB351252099F6004F9BD2 /* Assets.xcassets */,
 				1B8EB353252099F6004F9BD2 /* LaunchScreen.storyboard */,
@@ -102,6 +99,60 @@
 				AC912B072D4BAE4C001D43B1 /* JSON */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		ACA647CC2D4CAC7400FE834C /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				ACA647CD2D4CAC9600FE834C /* News */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		ACA647CD2D4CAC9600FE834C /* News */ = {
+			isa = PBXGroup;
+			children = (
+				ACA647D02D4CACD500FE834C /* Domain */,
+				ACA647CE2D4CACA000FE834C /* Presentation */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		ACA647CE2D4CACA000FE834C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				AC912B102D4BB717001D43B1 /* NewsViewModel.swift */,
+				1B8EB34C252099F3004F9BD2 /* ViewController.swift */,
+				ACA647CF2D4CACB200FE834C /* Components */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		ACA647CF2D4CACB200FE834C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				ACA647C82D4C98A600FE834C /* CategoryCell.swift */,
+				ACA647CA2D4CA79000FE834C /* NewsCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		ACA647D02D4CACD500FE834C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				ACA647D32D4CAE2700FE834C /* Entity */,
+				ACA647D12D4CAD1100FE834C /* NewsInteractor.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		ACA647D32D4CAE2700FE834C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				AC912B0C2D4BB317001D43B1 /* Category.swift */,
+				AC912B0E2D4BB320001D43B1 /* News.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +232,7 @@
 				1B8EB349252099F3004F9BD2 /* AppDelegate.swift in Sources */,
 				ACA647C92D4C98A600FE834C /* CategoryCell.swift in Sources */,
 				1B8EB34B252099F3004F9BD2 /* SceneDelegate.swift in Sources */,
+				ACA647D22D4CAD1100FE834C /* NewsInteractor.swift in Sources */,
 				AC912B0F2D4BB320001D43B1 /* News.swift in Sources */,
 				ACA647CB2D4CA79000FE834C /* NewsCell.swift in Sources */,
 				AC912B0D2D4BB317001D43B1 /* Category.swift in Sources */,

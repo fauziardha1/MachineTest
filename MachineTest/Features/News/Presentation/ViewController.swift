@@ -47,7 +47,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(viewModel.categories.count)
         setupView()
     }
     
@@ -87,14 +86,14 @@ extension ViewController: UICollectionViewDelegate {
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.categories.count
+        viewModel.getCategories().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCell.identifier, for: indexPath) as? CategoryCell else {
             return UICollectionViewCell()
         }
-        cell.configureWith(cat: viewModel.categories[indexPath.row].name)
+        cell.configureWith(cat: viewModel.getCategories()[indexPath.row].name)
         return cell
     }
     
@@ -110,7 +109,7 @@ extension ViewController: UITableViewDelegate {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.stockNews.count
+        viewModel.getNews().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -118,7 +117,7 @@ extension ViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.configure(with: viewModel.stockNews[indexPath.row], isMainNews: indexPath.row == 0)
+        cell.configure(with: viewModel.getNews()[indexPath.row], isMainNews: indexPath.row == 0)
         return cell
     }
 }
