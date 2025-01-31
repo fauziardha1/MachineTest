@@ -30,6 +30,20 @@ class ViewController: UIViewController {
         collection.register(CategoryCell.self, forCellWithReuseIdentifier: CategoryCell.identifier)
         return collection
     }()
+    
+    private let newsTitle: UILabel = {
+        let label = UILabel()
+        label.text = "Berita Saham"
+        label.font = .preferredFont(forTextStyle: .title3)
+        return label
+    }()
+    
+    private let newsView: UITableView = {
+        let table = UITableView()
+        table.register(NewsCell.self, forCellReuseIdentifier: NewsCell.identifier)
+        table.backgroundColor = .red
+        return table
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +55,10 @@ class ViewController: UIViewController {
         view.addSubview(stack)
         stack.addArrangedSubview(categoryTitle)
         stack.addArrangedSubview(categoriesView)
-        stack.addArrangedSubview(UIView())
+        stack.addArrangedSubview(newsTitle)
+        stack.addArrangedSubview(newsView)
         setupCategoriesView()
+        setupNewsView()
         
         NSLayoutConstraint.activate([
             stack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -57,6 +73,11 @@ class ViewController: UIViewController {
         categoriesView.dataSource = self
         categoriesView.delegate = self
         categoriesView.register(CategoryCell.self, forCellWithReuseIdentifier: CategoryCell.identifier)
+    }
+    
+    private func setupNewsView() {
+        newsView.delegate = self
+        newsView.dataSource = self
     }
 }
 
@@ -74,6 +95,30 @@ extension ViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         cell.configureWith(cat: viewModel.categories[indexPath.row].name)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        indexPath.row == .zero ? 250 : 150
+    }
+}
+
+
+extension ViewController: UITableViewDelegate {
+    
+}
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.stockNews.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: NewsCell.identifier) as? NewsCell else {
+            return UITableViewCell()
+        }
+        
+        cell.configure(with: viewModel.stockNews[indexPath.row], isMainNews: indexPath.row == 0)
         return cell
     }
 }

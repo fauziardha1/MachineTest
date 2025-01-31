@@ -19,6 +19,7 @@
 		AC912B0F2D4BB320001D43B1 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC912B0E2D4BB320001D43B1 /* News.swift */; };
 		AC912B112D4BB717001D43B1 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC912B102D4BB717001D43B1 /* NewsViewModel.swift */; };
 		ACA647C92D4C98A600FE834C /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA647C82D4C98A600FE834C /* CategoryCell.swift */; };
+		ACA647CB2D4CA79000FE834C /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA647CA2D4CA79000FE834C /* NewsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		AC912B0E2D4BB320001D43B1 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		AC912B102D4BB717001D43B1 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		ACA647C82D4C98A600FE834C /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		ACA647CA2D4CA79000FE834C /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				1B8EB348252099F3004F9BD2 /* AppDelegate.swift */,
 				1B8EB34A252099F3004F9BD2 /* SceneDelegate.swift */,
 				1B8EB34C252099F3004F9BD2 /* ViewController.swift */,
+				ACA647CA2D4CA79000FE834C /* NewsCell.swift */,
 				ACA647C82D4C98A600FE834C /* CategoryCell.swift */,
 				AC912B102D4BB717001D43B1 /* NewsViewModel.swift */,
 				AC912B0C2D4BB317001D43B1 /* Category.swift */,
@@ -179,6 +182,7 @@
 				ACA647C92D4C98A600FE834C /* CategoryCell.swift in Sources */,
 				1B8EB34B252099F3004F9BD2 /* SceneDelegate.swift in Sources */,
 				AC912B0F2D4BB320001D43B1 /* News.swift in Sources */,
+				ACA647CB2D4CA79000FE834C /* NewsCell.swift in Sources */,
 				AC912B0D2D4BB317001D43B1 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
